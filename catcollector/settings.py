@@ -88,7 +88,7 @@ if 'ON_HEROKU' in os.environ:
     # https://github.com/jazzband/dj-database-url
     DATABASES = {
         "default": dj_database_url.config(
-            env=os.environ.get('DATABASE_URL'),
+            env='DATABASE_URL',
             conn_max_age=600,
             conn_health_checks=True,
             ssl_require=True,
